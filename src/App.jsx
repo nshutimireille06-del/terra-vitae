@@ -2,6 +2,7 @@ import useGameStore from './store/gameStore'
 import StatBar from './components/StatBar'
 import TaskPanel from './components/TaskPanel'
 import CrisisEvent from './components/CrisisEvent'
+import WorldMap from './components/WorldMap'
 import eras from './data/eras'
 
 export default function App() {
@@ -25,6 +26,9 @@ export default function App() {
             </span>
           </div>
         </div>
+
+        {/* World Map */}
+        <WorldMap />
 
         {/* Crises */}
         <CrisisEvent />
