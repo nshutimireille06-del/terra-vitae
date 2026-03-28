@@ -1,6 +1,7 @@
 import useGameStore from '../store/gameStore'
 import LibraryInterior from './interiors/LibraryInterior'
 import ArtGalleryInterior from './interiors/ArtGalleryInterior'
+import SchoolInterior from './interiors/SchoolInterior'
 const placeContent = {
   library:     { name: 'The Grand Library',           description: 'Where wisdom lives. Every book you read adds to these shelves.',         interior: '📚 The shelves stretch high. Candles flicker between the stacks.',                color: '#2a1a0a', accent: '#c8a040' },
   school:      { name: 'Mentedore School',             description: 'Where young minds are shaped. Attendance reflects your academic tasks.',  interior: '🏫 Wooden desks, chalk dust, the smell of old paper.',                          color: '#0a1a2a', accent: '#4a90d9' },
@@ -110,6 +111,7 @@ export default function PlaceView() {
         {/* Place specific interior */}
         {currentPlace === 'library' && <LibraryInterior />}
         {currentPlace === 'artgallery' && <ArtGalleryInterior />}
+        {currentPlace === 'school' && <SchoolInterior />}
       </div>
     </div>
   )
