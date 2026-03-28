@@ -17,7 +17,17 @@ const useGameStore = create(
       tasks: [],
       crises: [],
       totalTasksCompleted: 0,
-      era: 'Settlement',
+    era: 'Settlement',
+      books: [],
+      addBook: (title, status) => set((state) => ({
+        books: [...state.books, { id: Date.now(), title, status }]
+      })),
+      updateBookStatus: (id, status) => set((state) => ({
+        books: state.books.map(b => b.id === id ? { ...b, status } : b)
+      })),
+     currentPlace: null,
+      setCurrentPlace: (place) => set({ currentPlace: place }),
+      exitPlace: () => set({ currentPlace: null }),
 
       addTask: (task) => set((state) => ({
         tasks: [...state.tasks, { ...task, id: Date.now(), completed: false }]

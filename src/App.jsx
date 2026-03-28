@@ -3,14 +3,18 @@ import StatBar from './components/StatBar'
 import TaskPanel from './components/TaskPanel'
 import CrisisEvent from './components/CrisisEvent'
 import WorldMap from './components/WorldMap'
+import PlaceView from './components/PlaceView'
 import eras from './data/eras'
 
 export default function App() {
   const { stats, totalTasksCompleted } = useGameStore()
+  const currentPlace = useGameStore((state) => state.currentPlace)
 
   const currentEra = eras.reduce((best, era) => {
     return totalTasksCompleted >= era.unlockTasks ? era : best
   }, eras[0])
+
+  if (currentPlace) return <PlaceView />
 
   return (
     <div className="min-h-screen bg-stone-900 text-stone-100 p-6">
