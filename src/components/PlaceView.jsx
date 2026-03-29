@@ -7,6 +7,7 @@ import BakeryInterior from './interiors/BakeryInterior'
 import HarborInterior from './interiors/HarborInterior'
 import ClothesShopInterior from './interiors/ClothesShopInterior'
 import TechHouseInterior from './interiors/TechHouseInterior'
+import ObservatoryInterior from './interiors/ObservatoryInterior'
 const placeContent = {
   library:     { name: 'The Grand Library',           description: 'Where wisdom lives. Every book you read adds to these shelves.',         interior: '📚 The shelves stretch high. Candles flicker between the stacks.',                color: '#2a1a0a', accent: '#c8a040' },
   school:      { name: 'Mentedore School',             description: 'Where young minds are shaped. Attendance reflects your academic tasks.',  interior: '🏫 Wooden desks, chalk dust, the smell of old paper.',                          color: '#0a1a2a', accent: '#4a90d9' },
@@ -122,6 +123,7 @@ export default function PlaceView() {
         {currentPlace === 'harbor' && <HarborInterior />}
         {currentPlace === 'clothes' && <ClothesShopInterior />}
         {currentPlace === 'techhouse' && <TechHouseInterior />}
+        {currentPlace === 'observatory' && <ObservatoryInterior />}
       </div>
     </div>
   )
