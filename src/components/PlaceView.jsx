@@ -10,6 +10,10 @@ import TechHouseInterior from './interiors/TechHouseInterior'
 import ObservatoryInterior from './interiors/ObservatoryInterior'
 import CastleInterior from './interiors/CastleInterior'
 import ArmoryInterior from './interiors/ArmoryInterior'
+import HealingHouseInterior from './interiors/HealingHouseInterior'
+import GardenInterior from './interiors/GardenInterior'
+import PrisonInterior from './interiors/PrisonInterior'
+import TownSquareInterior from './interiors/TownSquareInterior'
 const placeContent = {
   library:     { name: 'The Grand Library',           description: 'Where wisdom lives. Every book you read adds to these shelves.',         interior: '📚 The shelves stretch high. Candles flicker between the stacks.',                color: '#2a1a0a', accent: '#c8a040' },
   school:      { name: 'Mentedore School',             description: 'Where young minds are shaped. Attendance reflects your academic tasks.',  interior: '🏫 Wooden desks, chalk dust, the smell of old paper.',                          color: '#0a1a2a', accent: '#4a90d9' },
@@ -128,6 +132,10 @@ export default function PlaceView() {
         {currentPlace === 'observatory' && <ObservatoryInterior />}
         {currentPlace === 'castle' && <CastleInterior />}
         {currentPlace === 'armory' && <ArmoryInterior />}
+        {currentPlace === 'healing' && <HealingHouseInterior />}
+        {currentPlace === 'garden' && <GardenInterior />}
+        {currentPlace === 'prison' && <PrisonInterior />}
+        {currentPlace === 'townsquare' && <TownSquareInterior />}
       </div>
     </div>
   )
